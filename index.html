@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Load global styles first -->
+  <link rel="preload" href="css/globalAI.css" as="style">
+  <link rel="stylesheet" href="css/globalAI.css">
+
+  <!-- Load main site styles -->
+  <link rel="preload" href="css/mainAI.css" as="style">
+  <link rel="preload" href="css/heroCSS.css" as="style">
+  <link rel="preload" href="css/bottomCardCSS.css" as="style">
+
+  <link rel="stylesheet" href="css/mainAI.css">
+  <link rel="stylesheet" href="css/heroCSS.css">
+  <link rel="stylesheet" href="css/bottomCardCSS.css">
+
+    <!-- Top blue band link -->
+  <link rel="stylesheet" href="css/top-band.css">
+
+
+  <!-- Top blue band Java script deferred -->
+  <script src="js/top-band.js" defer></script>
+
+  <!-- General Java script deferred -->
+  <script src="js/script.js" defer></script>
+
+  <title>Vietnamese-American Community Center</title>
+
+</head>
+
+<body class="home-page">
+
+  <!-- Top blue band section -->
+  <div id="top-band-placeholder"></div>
+
+  <script>
+    fetch("components/top-band.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("top-band-placeholder").innerHTML = html;
+      });
+  </script>
+  <!-- End of Top blue band section-->
+
+  <!-- Header section -->
+  <!-- HEADER SECTION -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    
+    fetch("components/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header-placeholder").innerHTML = html;
+
+        // highlight active link
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll(".nav-links a").forEach(link => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+
+        // initialize hamburger AFTER header is inserted
+        initHamburger();
+      }); 
+  </script>
+  <!-- End of Header section-->
+
+  <!-- Hero section hero -->
+  <!-- HERO SECTION -->
+  <section class="home-hero">
+    <div class="home-hero-content">
+      <h1>Discover the heart of Vietnamese culture</h1>
+      <p>Preserving Vietnamese culture, language, and community for future generations.</p>
+      <a href="#contact" class="home-hero-btn">Explore Our Programs</a>
+    </div>
+  </section>
+  <!-- End of Hero section-->
+
+  <!-- </section> -->
+  
+  <!-- Mission & Values section -->
+  <!-- Our Mission & Values Section -->
+  <section id="Our Mission & Values" class="mission-values container ">
+    <div class="mv-content">
+      <div class="mv-text">
+        <h2>Our Mission & Values</h2>
+        <p>
+          We aim to nurture a strong sense of cultural identity among Vietnamese youth growing up abroad by helping them stay connected to their roots. Through a thoughtful and engaging curriculum, we give students meaningful opportunities to learn about the Vietnamese language, history, and cultural traditions in ways that feel relevant, welcoming, and empowering.
+        </p>
+      </div>
+
+      <div class="mv-image">
+        <img src="images/noivongtaylon.jpg" alt="Vietnamese cultural learning">
+      </div>
+    </div>
+  </section>
+<!-- End of Mission & Values section -->
+
+<!-- Core Offerings section-->
+  <!-- Services Section -->
+  <section id="Our Core Offerings" class="core-offerings container">
+    <div class="core-content">
+      <div class="core-text">
+        <h2>Our Core Offerings</h2>
+        <p>
+        We provide a range of specialized services and programs designed to meet the diverse needs of our community, focusing on education, cultural enrichment, and engagement opportunities.
+        </p>
+      </div>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="sc-text">
+          <img src="images/classImage.jpg" alt="Vietnamese language classes" class="sc-image">
+          <h3>Vietnamese language classes</h3>
+          <p>Engaging classes for all ages and proficiency levels, designed to teach Vietnamese language skills effectively.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="sc-text">
+          <img src="images/dantranh.jpg" alt="Vietnamese language classes" class="sc-image">
+          <h3>Cultural programs & workshops</h3>
+          <p>Immersive experiences that explore Vietnamese traditions, history, art, and culinary heritage.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="sc-text">
+          <img src="images/volunteersImage.png" alt="Vietnamese language classes" class="sc-image">
+          <img src="images/volunteerImage.jpg" alt="Vietnamese language classes" class="sc-image">
+          <h3>Volunteer & teaching opportunities</h3>
+          <p>Opportunities for individuals, including older adults, to contribute their skills and time to our community.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="sc-text">
+          <img src="images/calendarImage.jpg" alt="Vietnamese language classes" class="sc-image">
+          <h3>Upcoming events & news</h3>
+          <p>Stay updated on our latest news, cultural celebrations, and community gatherings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End of Core Offerings section -->
+
+  <!-- About section -->
+  <!-- About Section -->
+  <section id="about" class="about container">
+    <!-- <h2>About the VietAm Cultural Center</h2> -->
+
+    <div class="about-wrapper">
+
+      <!-- LEFT COLUMN: Image -->
+      <div class="about-left">
+        <img src="images/hainonlaImage.jpg" alt="About Viet-Am Community Center">
+      </div>
+
+      <!-- RIGHT COLUMN: Two stacked cards -->
+      <div class="about-right">
+
+        <!-- Top Card -->
+        <div class="about-card top-card">
+          <div class="about-text">
+            <h3>About the Vietnamese American Community Center</h3>
+            <p>
+              Established with a passion for preserving and promoting Vietnamese culture, our center serves as a unique bridge between generations and cultures in the DMV area. We are a trusted resource for Vietnamese language education, cultural exchange, and community building, welcoming everyone to experience our rich heritage.
+            </p>
+          </div>
+          <a href="#contact" class="about-btn">Contact Us</a>
+        </div>
+
+        <!-- Bottom Card -->
+        <!-- Bottom card's structure as below
+        Aiming for a two‑part bottom card where:
+          Right Column → Bottom Section Structure
+
+              Top sub‑card
+
+                  Taller
+
+                  Contains one large image
+
+                  Image fills the entire width
+
+                  Image is chosen from the set of images in the lower sub‑card
+
+              Bottom sub‑card
+
+                  Contains multiple smaller cards
+
+                  Each small card has an image
+
+                  These images cycle left‑to‑right (carousel‑style or auto‑rotation)
+        -->
+        <!-- Bottom Card -->
+        <div class="about-card bottom-card">
+
+          <!-- TOP SUB-CARD: Large Image -->
+          <div class="programs-top">
+            <img src="images/noivongtaylon.jpg" alt="Featured Program" class="programs-featured-img">
+          </div>
+
+          <!-- BOTTOM SUB-CARD: Multiple Small Cards -->
+          <div class="programs-bottom">
+
+            <div class="program-item">
+              <img src="images/noivongtaylon.jpg" alt="Program 1">
+            </div>
+
+            <div class="program-item">
+              <img src="images/tienhocleImage.jpg" alt="Program 2">
+            </div>
+
+            <!-- for some reasons this image troubled to be displayed onto top sub-card - from its size ??? -->
+            <div class="program-item">
+              <img src="images/hocsinhImage.jpg" alt="Program 4">
+            </div>
+
+            <div class="program-item">
+              <img src="images/biasachImage.jpg" alt="Program 3">
+            </div>
+
+            <!--            -->
+            <div class="program-item">
+              <img src="images/lambanhImage.jpg" alt="Program 5">
+            </div>
+
+            <div class="program-item">
+              <img src="images/phucvuImage.jpg" alt="Program 6">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of About section -->
+
+  <!-- Contact section -->
+  <!-- Contact Section -->
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  <!-- End of Contact section -->
+
+  <!-- Footer section -->
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 YourBrand — All Rights Reserved</p>
+  </footer>
+  <!-- End of Footer section -->
+
+  <!-- Scripts section -->
+  <script src="js/script.js"></script>
+
+  <!-- Optional hero JS -->
+  <script src="js/heroJS.js"></script>
+
+  <!-- bottom card JS -->
+  <script src="js/bottomCardJS.js"></script>
+
+  <!-- Top blue band Java script -->
+  <script src="js/top-band.js"></script>
+
+  <!-- End of Scripts section -->
+</body>
+</html>
+
+<!-- or this one good too - 04/21/2026
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vietnamese-American Cultural Center</title>
+  <link rel="stylesheet" href="css/globalAI.css">
+  <link rel="stylesheet" href="css/headerAI.css">
+  <link rel="stylesheet" href="css/heroAI.css">
+  <link rel="stylesheet" href="css/missionAI.css">
+  <link rel="stylesheet" href="css/coreAI.css">
+  <link rel="stylesheet" href="css/galleryAI.css">
+  <link rel="stylesheet" href="css/contactAI.css">
+  <link rel="stylesheet" href="css/footerAI.css">
+  <link rel="stylesheet" href="css/responsiveAI.css">
+  <script src="script.js" defer></script>
+
+</head>
+-->

@@ -1,0 +1,284 @@
+  You can absolutely build that layout — a 2‑column About section where:
+
+      Left column = one large image
+
+      Right column = two stacked cards
+
+          Top card = header + paragraph + its own “Contact Us” button
+
+          Bottom card = whatever content you want
+
+  Below is the clean HTML + CSS structure to achieve exactly that.
+
+---------------------------------- HTML ---------------------------------------
+
+<!-- Gallery section -->
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"></div>
+      <div class="gallery-item"></div>
+      <div class="gallery-item"></div>
+      <div class="gallery-item"></div>
+    </div>
+  </section>
+<!-- End of Gallery section -->
+
+
+----------------------------------- CSS ---------------------------------------
+
+  ⭐ What this gives you
+  ✔ A clean 2‑column layout
+
+  Left = image
+  Right = stacked cards
+  ✔ Top card includes
+
+      header
+
+      paragraph
+
+      its own button
+
+  ✔ Fully responsive
+
+  On mobile, it collapses into a single column.
+  ✔ Matches your existing design
+
+  Uses your color palette, shadows, spacing, and typography.
+
+  /* About Section Layout */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* Left column image */
+.about-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Right column stacked cards */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card styling */
+.about-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-card h3 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  margin-bottom: 15px;
+}
+
+/* Contact button */
+.about-btn {
+  display: inline-block;
+  background: #fc6e51;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+-------------------------------------------------------------------------------
+
+  If you want, I can also:
+
+      style the cards with icons
+
+      add animations (fade‑in, slide‑up)
+
+      match the exact spacing of your other sections
+
+      or generate a version that uses CSS Grid, Flexbox, or Bootstrap
+
+  Just tell me how fancy you want this section to look.
+
+-------------------------------------------------------------------------------
+
+tell me differences between CSS grid, flexbox and bootstrap???
+
+Here’s the clearest, most practical breakdown of CSS Grid, Flexbox, and Bootstrap — not the generic textbook version, but the version that actually helps you choose the right tool when building real layouts like your About section.
+
+  🎯 The short answer
+
+      Flexbox → best for one‑dimensional layouts (a row or a column)
+
+      CSS Grid → best for two‑dimensional layouts (rows and columns at the same time)
+
+      Bootstrap → a pre‑built framework that uses Flexbox/Grid under the hood to give you ready‑made layout classes
+
+  🧩 1. Flexbox — “Arrange things in a line”
+
+  Flexbox is perfect when you want elements to flow in one direction:
+
+      A row of navigation links
+
+      A column of stacked cards
+
+      A sidebar + content layout
+
+      Centering things easily
+
+  ✔ Strengths
+
+      Super easy to align items (center, space-between, etc.)
+
+      Great for responsive layouts
+
+      Perfect for components (cards, navbars, buttons)
+
+  ✘ Weaknesses
+
+      Not ideal for complex multi‑row layouts
+
+      Harder to control both rows and columns at once
+
+  When to use it
+
+  Use Flexbox when you want one row or one column to behave nicely.
+  🧱 2. CSS Grid — “Build a full layout system”
+
+  Grid is designed for two‑dimensional layouts:
+
+      Multi‑column sections
+
+      Complex page layouts
+
+      Image galleries
+
+      Dashboard‑style designs
+
+  ✔ Strengths
+
+      Controls rows and columns simultaneously
+
+      Lets you place items anywhere in the grid
+
+      Great for full‑page or section layouts
+
+      Very powerful for responsive design
+
+  ✘ Weaknesses
+
+      More complex than Flexbox
+
+      Overkill for simple one‑direction layouts
+
+  When to use it
+
+  Use Grid when you want true columns, like your About section:
+
+  Left column → image
+  Right column → stacked cards
+
+  Grid handles that beautifully.
+  🧰 3. Bootstrap — “A pre‑built layout system with classes”
+
+  Bootstrap is not a layout method — it’s a framework that uses Flexbox/Grid internally.
+
+  It gives you:
+
+      A 12‑column grid system
+
+      Pre‑styled buttons, cards, navbars
+
+      Utility classes (mt-3, d-flex, col-md-6, etc.)
+
+      Mobile‑first responsive behavior
+
+  ✔ Strengths
+
+      Fast to build with
+
+      Consistent design
+
+      Tons of ready‑made components
+
+      Great for teams or rapid prototyping
+
+  ✘ Weaknesses
+
+      Adds a large CSS file
+
+      Your site can look “Bootstrap‑ish”
+
+      Less creative freedom
+
+      You must learn Bootstrap’s class system
+
+  When to use it
+
+  Use Bootstrap when you want speed, consistency, and pre‑built components.
+  🥊 Which one should YOU use for your About section?
+
+  Your layout:
+
+      2 columns
+
+      Left = image
+
+      Right = two stacked cards
+
+  This is exactly what CSS Grid is best at.
+
+  Flexbox could do it, but Grid is cleaner.
+  Bootstrap could do it, but you don’t need a whole framework for one section.
+
+  🧠 Quick comparison table
+  Feature	        Flexbox	                CSS Grid	                      Bootstrap
+  Layout type	    1D (row OR column)	    2D (rows AND columns)	          Framework using Flexbox/Grid
+  Best for	      Navbars, cards, 	      Page sections, grids, 	        Fast development, prebuilt UI
+                  buttons                 galleries
+  Learning curve	Easy	                  Medium	                        Medium
+  Custom design 	High	                  Very high	                      Lower (predefined styles)
+  freedom
+  File size 	    None	                  None	                          Large (extra CSS/JS)
+  impact
+  
+  🎯 Final recommendation for your project
+
+  For your site’s style — clean, custom, modern — CSS Grid is the best fit.
+
+  You’re already using Grid in other sections, and it keeps your code lightweight and fully under your control.
+
+If you want, I can also show you:
+
+    the same layout built with Flexbox
+
+    the same layout built with Bootstrap
+
+    or a side‑by‑side comparison of the code
+
+Just tell me which version you want to explore next.
+
+-------------------------------------------------------------------------------

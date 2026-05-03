@@ -1,0 +1,12 @@
+/*
+    cssAIStructure.txt suggested by AI for the webpage
+
+    Created on 04/21/2026
+
+*/
+
+headerAI.css
+heroAI.css
+sectionsAI.css
+footerAI.css
+responsiveAI.css

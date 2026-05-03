@@ -1,0 +1,140 @@
+<!--
+    language-classed.html optimized version of AI
+
+    Created on 04/27/2026
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnamese Language Classes | Vietnamese-American Community Center</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/mainAI.css">
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="css/language-classes.css">
+
+    <!-- Top blue band link -->
+    <link rel="stylesheet" href="css/top-band.css">
+
+    <!-- Top blue band Java script deferred   -->
+    <script src="js/top-band.js" defer></script>
+
+    <!-- <script src="js/script.js" defer></script> -->
+</head>
+
+<body class="language-classes-page">
+
+  <!-- Top blue band section -->
+  <div id="top-band-placeholder"></div>
+
+  <script>
+    fetch("components/top-band.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("top-band-placeholder").innerHTML = html;
+      });
+  </script>
+  <!-- End of Top blue band section-->
+
+  <!-- Header section -->
+  <div id="header-placeholder"></div>
+
+  <script>
+      fetch("components/header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("header-placeholder").innerHTML = html;
+
+          // highlight active link
+          const currentPage = window.location.pathname.split("/").pop() || "index.html";
+          document.querySelectorAll(".nav-links a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+              link.classList.add("active");
+            }
+          });
+
+          // initialize hamburger AFTER header is inserted
+          initHamburger();
+        });   
+  </script>
+  <!-- End of Header section -->
+
+  <section class="hero language-classes">
+      <h1>Unlock the beauty of Vietnamese</h1>
+      <p>Discover the rich heritage and vibrant culture through our engaging Vietnamese language classes. Whether you're a first-time learner or looking to deepen your fluency, the Viet-Am Community Center is here to guide you.</p>
+      <a class="btn" href="#">Enroll today</a>
+  </section>
+
+  <section class="programs">
+      <h2>Our Vietnamese language programs</h2>
+      <p>We offer specialized Vietnamese language classes designed to meet the needs of diverse learners, fostering confidence and a deeper connection to Vietnamese culture. Our approach focuses on practical communication and cultural immersion.</p>
+
+      <div class="program-grid">
+          <div class="program-card">
+              <img src="images/tuoithoImage.jpg" alt=""> <!--https://primary.jwwb.nl/pexels/89/8923804.jpeg-->
+              <h3>Youth (6–12)</h3>
+              <p>Fun, interactive classes introducing basic Vietnamese vocabulary and phrases.</p>
+          </div>
+
+          <div class="program-card">
+              <img src="images/hainonlaImage.jpg" alt=""> <!--https://primary.jwwb.nl/pexels/55/5553640.jpeg-->
+              <h3>Teens (13–17)</h3>
+              <p>Conversational skills and cultural understanding for teenage learners.</p>
+          </div>
+
+          <div class="program-card">
+              <img src="https://primary.jwwb.nl/pexels/84/8453935.jpeg" alt="">
+              <h3>Adults (18+)</h3>
+              <p>Beginner to advanced courses emphasizing practical communication.</p>
+              <a class="btn" href="#">Inquire about classes</a>
+          </div>
+      </div>
+  </section>
+
+  <section class="culture">
+      <h1>Connect with Vietnamese culture and identity</h1>
+      <p>Language is more than words — it’s identity, history, and belonging.</p>
+      <img src="https://primary.jwwb.nl/pexels/93/9301251.jpeg" alt="">
+  </section>
+
+  <section class="levels">
+      <h2>Class levels and structure</h2>
+
+      <p><strong>Beginner:</strong> Basic vocabulary, tones, simple conversations, reading & writing fundamentals.</p>
+      <p><strong>Intermediate:</strong> Grammar, sentence structure, reading passages, cultural expressions.</p>
+      <p><strong>Advanced:</strong> Complex conversations, storytelling, literature, writing reflections.</p>
+
+      <h3>What to expect</h3>
+      <ul>
+          <li>Stronger speaking and listening skills</li>
+          <li>Confidence using Vietnamese in daily life</li>
+          <li>Connection to Vietnamese culture</li>
+          <li>Community friendships</li>
+      </ul>
+
+      <p>Classes are held in-person, with 2 sessions of 10–12 week courses. Each class lasts 150 minutes.</p>
+
+      <img src="https://primary.jwwb.nl/pexels/56/5676744.jpeg" alt="">
+  </section>
+
+  <footer>
+      © 2026 Viet-Am Community Center
+  </footer>
+
+  <script src="language-classes.js"></script>
+
+  <script src="js/script.js"></script>
+
+  <!-- Top blue band Java script deferred   -->
+  <script src="js/top-band.js" defer></script>
+  
+
+
+</body>
+</html>

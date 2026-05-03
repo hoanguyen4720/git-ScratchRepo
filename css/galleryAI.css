@@ -1,0 +1,29 @@
+/*
+  galleryAI.css optimized by AI for the webpage
+
+  ⭐ What I improved
+
+      Kept only the functional rules — nothing extra.
+
+      Cleaned spacing and grouped logically.
+
+      No duplicates or unnecessary comments.
+
+      Ready to be modularized into gallery.css.
+
+  Created on 04/21/2026
+
+*/
+
+/* Gallery Section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  background: #ccc;
+  height: 180px;
+  border-radius: 8px;
+}

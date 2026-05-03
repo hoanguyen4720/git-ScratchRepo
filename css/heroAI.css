@@ -1,0 +1,69 @@
+/*
+  heroAI.css optimized by AI for the webpage
+
+  ⭐ What I optimized
+  ✔ Removed commented-out unused styles
+
+  You had older gradient backgrounds and alternative hero styles — removed for clarity.
+  ✔ Replaced top/left/width/height with inset: 0
+
+  Cleaner and more modern.
+  ✔ Grouped related rules
+
+  Overlay, content, and hero container are now clearly separated.
+  ✔ No duplication, no redundant properties
+
+  Everything is minimal and efficient.
+
+
+  Created on 04/21/2026
+
+*/
+
+/* Hero Section */
+.hero {
+  height: 500px;
+  background-image: url("Image 20.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+  position: relative;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  );
+  z-index: 1;
+}
+
+/* Content above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background: #fc6e51;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}

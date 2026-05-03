@@ -1,0 +1,52 @@
+/*
+  responsiveAI.css optimized by AI for the webpage
+
+  ⭐ What I optimized
+  ✔ Removed duplicate .menu-btn rules
+
+  You had two identical declarations — now merged.
+  ✔ Grouped related mobile rules
+
+  Navigation, dropdown, and layout adjustments are now clearly separated.
+  ✔ Clean, minimal, and modular
+
+  Perfect for a standalone responsive.css file.
+
+  Created on 04/21/2026
+
+*/
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+  /* Mission & Values: stack columns */
+  .mission-values .mv-content {
+    flex-direction: column;
+  }
+
+  /* Navigation layout on mobile */
+  .nav {
+    justify-content: space-between;
+  }
+
+  /* Mobile dropdown menu */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 200px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-start;
+  }
+
+  /* Show hamburger icon */
+  .menu-btn,
+  .hamburger {
+    display: block;
+  }
+}

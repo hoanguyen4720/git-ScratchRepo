@@ -1,0 +1,187 @@
+/*
+    language-classes.css
+
+    Created on 04/27/2026
+
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/*
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar a.active {
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    background-color: #fc6e51 !important;
+    color: white !important;
+}
+*/
+
+/* Default active style (for Home) */
+/*
+nav a.active {
+    color: #ff6a00;
+    font-weight: bold;
+} */
+
+/* Override for Language Classes page */
+/*
+.language-classes-page .nav-language {
+    color: #ff6a00;
+    font-weight: bold;
+}
+*/
+/* Remove highlight from Home when on subpage */
+/*
+.language-classes-page .nav-home {
+    color: inherit;
+    font-weight: normal;
+}
+*/
+.language-classes {
+    background: ff6a00; /* warm orange like your image - #f28c28 */
+    color: white;
+
+    /* SHRINK HEIGHT */
+    padding: 40px 20px !important;   /* ↓ much smaller */
+    min-height: auto !important;     /* remove any inherited min-height */
+    height: auto !important;         /* ensure it doesn't stretch */
+
+    /* LAYOUT */
+    text-align: center;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 20px auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+}
+
+.language-classes h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.language-classes p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.language-classes .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: white;
+    color: #f28c28;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.25s ease;
+}
+
+.language-classes .btn:hover {
+    background: #ffe8d1;
+}
+
+.hero.language-classes {
+    background: #ff6a00 !important; /* bright orange */
+    background-image: none !important;
+}
+
+
+/*
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f0f5ff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0077ff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+*/
+
+.programs {
+    padding: 40px 20px;
+}
+
+.program-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.program-card {
+    width: 30%;
+    min-width: 250px;
+}
+
+/* .program-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+
+.program-card img {
+    width: 100%;
+    height: 300px;   /* or any height you prefer */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*
+.program-card img {
+    width: 100%;
+    border-radius: 8px;
+} */
+
+.culture, .levels {
+    padding: 40px 20px;
+}
+
+.culture img, .levels img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f8f8;
+    margin-top: 40px;
+}

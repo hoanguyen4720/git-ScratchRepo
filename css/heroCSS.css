@@ -1,0 +1,125 @@
+/*
+  heroCSS.css polished version of AI
+
+  ⭐ What this package gives you
+  ✔ A standalone hero section
+
+  Perfect for testing, prototyping, or dropping into a larger site.
+  ✔ Clean separation of concerns
+
+      HTML = structure
+
+      CSS = design
+
+      JS = behavior
+
+  ✔ Easy to integrate
+
+  You can plug this into any project (React, static site, WordPress, etc.).
+  ✔ Fully customizable
+
+  Swap the background image, text, colors, or animation.
+
+  Opacity	Effect
+  0.45	Dark (your current)
+  0.35	Medium-dark
+  0.25	Light overlay (recommended)
+  0.15	Very light overlay
+  0.00	No overlay at all
+
+  Created on 04/23/2026
+
+*/
+
+/* Hero Section */
+.home-hero {
+  height: 550px;
+  background-image: url("../images/heroImage.jpg"); /* Image 20.jpg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Overlay */
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);   /* 0.45	Dark (your current) */
+  z-index: 1;
+}
+
+/* Content */
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  color: white;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Headline */
+.home-hero-content h1 {
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Subheadline */
+.home-hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Button */
+.home-hero-btn {
+  background: #fc6e51;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.2s ease;
+}
+
+.home-hero-btn:hover {
+  background: #e85d42;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home-hero {
+    height: 450px;
+  }
+
+  .home-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-hero-content p {
+    font-size: 1rem;
+  }
+}

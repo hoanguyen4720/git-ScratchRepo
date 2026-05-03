@@ -1,0 +1,39 @@
+/*
+  contactAI.css optimized by AI for the webpage
+
+  ⭐ What I improved
+
+      Kept only the functional rules — no clutter.
+
+      Clean, minimal, and consistent spacing.
+
+      Perfectly modular for a standalone contact.css file.
+
+      No duplicates or unnecessary comments.
+
+  Created on 04/21/2026
+
+/*
+
+/* Contact Section */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #0077cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,168 @@
+<!--
+  cultural-programs.html optiomized version of AI
+
+  Created on 04/28/2026
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Programs | Viet-Am Community Center</title>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/mainAI.css">
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="css/cultural-programs.css">
+
+  <!-- Top blue band link -->
+  <link rel="stylesheet" href="css/top-band.css">
+
+
+  <!-- Top blue band Java script deferred   -->
+  <script src="js/top-band.js" defer></script>
+
+
+</head>
+
+<body class="cultural-programs-page">
+
+  <!-- Top blue band section -->
+  <div id="top-band-placeholder"></div>
+
+  <script>
+    fetch("components/top-band.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("top-band-placeholder").innerHTML = html;
+      });
+  </script>
+  <!-- End of Top blue band section-->
+
+  <!-- Load shared header -->
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+  <script>
+      fetch("components/header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("header-placeholder").innerHTML = html;
+
+          // highlight active link
+          const currentPage = window.location.pathname.split("/").pop() || "index.html";
+          document.querySelectorAll(".nav-links a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+              link.classList.add("active");
+            }
+          });
+
+          // initialize hamburger AFTER header is inserted
+          initHamburger();
+        });   
+  </script>
+  <!-- End of Header section -->
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Experience the richness of culture</h1>
+    <p>
+      Our cultural programs at the Vietnamese-American Community Center offer a unique blend of traditions, bringing together the Vietnamese and American communities. Discover authentic experiences, family-friendly activities, and opportunities to learn, create, and celebrate.
+    </p>
+    <a href="#programs" class="btn">Explore our programs</a>
+  </section>
+
+  <!-- SECTION: Highlights from AI - 04/30/2026 -->
+  <section class="section highlights-container">
+
+    <!-- Top Part -->
+    <div class="highlights-top">
+      <h2>Our cultural program highlights</h2>
+      <p>
+        We believe in fostering strong community bonds through shared cultural exploration. Our programs are designed to be inclusive and engaging for everyone, from children to adults.
+      </p>
+    </div>
+
+    <!-- Grid of 3 Cards -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <img src="images/speciallearningImage.jpg" alt="Cultural highlight 1">
+        <h3>Authentic experiences</h3>
+        <p>Immerse yourself in genuine Vietnamese traditions and customs, creating memorable cultural connections.</p>
+      </div>
+
+      <div class="highlight-card">
+        <img src="images/familyfunImage.jpg" alt="Cultural highlight 2">
+        <h3>Family-friendly fun</h3>
+        <p>Our activities are perfect for parents and children to learn together, fostering cultural appreciation across generations.</p>
+      </div>
+
+      <div class="highlight-card">
+        <img src="images/speciallearningImage.jpg" alt="Cultural highlight 3">
+        <h3>Expert-led learning</h3>
+        <p>Gain insights from community experts who share their knowledge and passion for Vietnamese culture.</p>
+      </div>
+    </div>
+
+    <!-- Bottom Button -->
+    <div class="highlights-button">
+      <button class="btn-highlight">Explore More</button>
+    </div>
+
+  </section>
+
+
+  <!-- SECTION: Highlights - old implementation 04/30/2026
+  <section class="section">
+    <h2>Our cultural program highlights</h2>
+    <p>
+      We believe in fostering strong community bonds through shared cultural exploration.
+    </p>
+    <img src="images/culture1.jpg" alt="Cultural highlight">
+  </section>
+  -->
+
+  <!-- SECTION: Programs for all ages -->
+  <section class="section">
+    <h2>Programs for every age</h2>
+    <p>
+      Activities and events suitable for children, families, and adults.
+    </p>
+  </section>
+
+  <!-- SECTION: Meaningful takeaways -->
+  <section class="section">
+    <h2>Meaningful takeaways</h2>
+    <p>
+      Learn, create, and celebrate — fostering a deeper understanding of culture.
+    </p>
+    <a href="volunteer.html" class="btn">Get involved</a>
+    <img src="images/culture5.jpg" alt="Meaningful takeaways">
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("footer-placeholder").innerHTML = html;
+      });
+  </script>
+
+  <!-- Scripts section -->
+  <script src="js/cultural-programs.js"></script>
+
+  <!--  Common Java script of the website -->
+  <script src="js/script.js"></script>
+
+  <!-- Top blue band Java script -->
+  <script src="js/top-band.js"></script>
+  <!-- End of Scripts section -->
+
+</body>
+</html>

@@ -1,0 +1,488 @@
+/*
+  mainAI.css optimized by AI for the webpage
+
+  ⭐ What you now have
+
+  A single, clean, production‑ready main.css that includes:
+
+      Global styles
+
+      Header
+
+      Hero
+
+      Mission & Values
+
+      Core Offerings
+
+      Services
+
+      Gallery
+
+      Contact
+
+      Footer
+
+      Responsive rules
+
+  All optimized, deduplicated, and organized with clear section headers.
+
+  Created on 04/21/2026
+
+*/
+
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+section {
+  padding: 5px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+/* Top blue band */
+.top-blue-band {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 6px 0;
+}
+
+.blue-band-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: blue;
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+}
+
+.band-right {
+  font-weight: bold;
+}
+
+/* Header container */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo row */
+.header-top {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  line-height: 1;
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 54px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 15px;
+  border-top: 1px solid #ddd;
+}
+
+.nav-links { /* -home */ 
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-links a { /* -links */ 
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active { /* -links */ 
+  background-color: #fc6e51;
+  color: white;
+}
+/* class
+.menu-btn {
+  display: none;
+}
+ */
+/* ID */
+#menuID-btn {
+  width: 30px;
+  height: 22px;
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+
+#menuID-btn span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fc6e51; /* ORANGE COLOR */
+  border-radius: 2px;
+}
+
+/*
+#menuID-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border: 2px solid red;
+}
+*/
+/* End of Header section */
+
+/* =========================================================
+   MISSION & VALUES
+   ========================================================= */
+.mission-values {
+  width: 100%;
+  background: white;
+}
+
+.mission-values .mv-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mission-values .mv-text {
+  flex: 1;
+}
+
+.mission-values .mv-text h2 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.mission-values .mv-text p {
+  padding-left: 8rem;
+}
+
+.mission-values .mv-image {
+  flex: 1;
+}
+
+.mission-values .mv-image img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   CORE OFFERINGS + SERVICES
+   ========================================================= */
+.core-offerings {
+  width: 100%;
+  background: white;
+  border-top: 2px solid #e2e0e0;
+}
+
+.core-offerings .core-content {
+  max-width: 640px;
+  margin-left: 2rem;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.core-offerings .core-text {
+  flex: 1;
+}
+
+.core-offerings .core-text h2 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: left;
+}
+
+/* Services grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-card .sc-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.service-card .sc-text h3 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+#about {
+  padding-top: 60px; /* adjust to taste */ /* margin-top: 60px; */
+}
+
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch; /* forces both columns to match height */
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Top Card Container */
+.about-card.top-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Text Wrapper */
+.about-card.top-card .about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Heading */
+.about-card.top-card h3 {
+  font-family: "Merriweather", serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #fc6e51;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Paragraph */
+.about-card.top-card p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #444;
+  margin: 0;
+}
+
+/* Button */
+.about-card.top-card .about-btn {
+  align-self: flex-start;
+  background: #fc6e51;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.about-card.top-card .about-btn:hover {
+  background: #e85d42;
+}
+
+.about-left {
+  height: 100%;
+}
+
+.about-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the space without distortion */
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  background: #ccc;
+  height: 180px;
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #0077cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+
+  .mission-values .mv-content {
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 200px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-start;  /* 04-29-2026 */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+
+  /* Mobile menu button */
+  /* ID */
+  #menuID-btn {
+   /*  */
+  display: flex;
+  }
+
+  /* When menu is open → turn into X  */
+  #menuID-btn.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  #menuID-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menuID-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+}
+  /*
+  .menu-btn {
+    display: inline-block;
+    cursor: pointer;
+  }
+  */
+  /* 
+  display: inline-block; flex
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fc6e51;
+  font-size: 3.8rem;
+  border: 2px solid red;
+  */

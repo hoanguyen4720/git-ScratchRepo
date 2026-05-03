@@ -1,0 +1,32 @@
+/*
+  top-band.css optimized version of AI
+
+  Created on 04/28/2026
+
+*/
+
+.top-blue-band {
+  width: 100%;
+  background-color: whitesmoke; /* #005bbb */
+  color: blue; /* white */
+  padding: 6px 0;
+  font-family: Arial, sans-serif;
+}
+
+.blue-band-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.band-left {
+  flex: 1;
+}
+
+.band-right {
+  font-size: 0.90rem; /* 0.95rem */
+  font-weight: bold; /* 500 */
+}

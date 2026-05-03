@@ -1,0 +1,145 @@
+/*
+  headerAI.css optimized by AI for webpage
+
+  ✔ Cleaned spacing & ordering
+
+  Everything is grouped logically:
+
+      Top band
+
+      Header container
+
+      Logo
+
+      Navigation
+
+      Mobile nav
+
+
+  Created on 04/21/2026
+
+*/
+
+/* Top blue band */
+.top-blue-band {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 6px 0;
+}
+
+.blue-band-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: blue;
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+}
+
+.band-right {
+  font-weight: bold;
+}
+
+
+/* Header container */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* Logo row */
+.header-top {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  line-height: 1;
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 54px;
+}
+
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #fc6e51;
+  color: white;
+}
+
+
+/* Mobile menu button */
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 200px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-start;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

@@ -1,0 +1,277 @@
+still not working per suggestions; here are what currently implemented:
+1. from header.html
+    <!-- Header section -->
+    <header>
+    <div class="container header-top">
+        <div class="logo">Vietnamese-American Community Center</div>
+    </div>
+
+    <nav class="container nav">
+        <ul class="nav-links">
+        <li><a href="index.html" class="nav-home">Home</a></li>
+        <li><a href="language-classes.html" class="nav-language">Language Classes</a></li>
+        <li><a href="cultural-programs.html" class="nav-culture">Cultural Programs</a></li>
+        <li><a href="volunteer.html" class="nav-volunteer">Volunteer & Teaching</a></li>
+        <li><a href="news.html" class="nav-news">News & Blog</a></li>
+        <li><a href="events.html" class="nav-events">Upcoming Events</a></li>
+        </ul>
+        <!-- <div class="menu-btn" id="menu-btn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div> -->
+        <div class="menu-btn" id="menu-btn">☰</div>
+    </nav>
+    </header>
+    <!-- End of Header section -->
+2. from header.css file
+    /* Top blue band */
+    .top-blue-band {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 6px 0;
+    }
+
+    .blue-band-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    color: blue;
+    font-family: "Merriweather", serif;
+    font-size: 0.9rem;
+    }
+
+    .band-right {
+    font-weight: bold;
+    }
+    /* End of Top blue band */
+
+
+    /* Logo and navigation band */
+    .header-top {
+    padding: 25px 0;
+    text-align: center;
+    }
+
+    /* Navigation row */
+    .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-top: 1px solid #ddd;
+    }
+
+    /* Sticky header container */
+    header {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    /* Navigation bar */
+    .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    }
+
+    /* Logo */
+    .logo {
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+    margin: 0;
+    color: #fc6e51;
+    font-family: "Merriweather","serif";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 54px;
+    display: inline;
+    }
+
+    /* Navigation links */
+    /* Hide nav links on mobile */
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    }
+
+    /* Show nav when open */
+    .nav-links.open {
+    display: flex;
+    }
+
+    /* Show hamburger on mobile */
+    #menu-btn {
+    display: flex !important;
+    }
+    /* .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    } */
+
+    .nav-links a {
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    }
+
+    .nav-links a:hover {
+    background-color: #fc6e51;
+    color: white;
+    }
+
+    .nav-links a.active {
+    background-color: #fc6e51;
+    color: white;
+    }
+
+    @media (max-width: 768px) {
+    /* Mobile menu button */
+    #menu-btn {
+        display: none;
+    }
+    /* Default hamburger lines */
+    #menu-btn {
+        cursor: pointer;
+        width: 30px;
+        height: 22px;
+        display: flex; /* none */
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #menu-btn span {
+        display: block;
+        height: 4px;
+        background: #333;
+        border-radius: 2px;
+        transition: 0.3s ease;
+    }
+
+    /* When menu is open → turn into X */
+    #menu-btn.open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #menu-btn.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-btn.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    }
+3. from mainAI.css file
+    /* =========================================================
+    HEADER
+    ========================================================= */
+
+    /* Top blue band */
+    .top-blue-band {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 6px 0;
+    }
+
+    .blue-band-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    color: blue;
+    font-family: "Merriweather", serif;
+    font-size: 0.9rem;
+    }
+
+    .band-right {
+    font-weight: bold;
+    }
+
+    /* Header container */
+    header {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    /* Logo row */
+    .header-top {
+    padding: 25px 0;
+    text-align: center;
+    }
+
+    .logo {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    line-height: 1;
+    color: #fc6e51;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: 54px;
+    }
+
+    /* Navigation */
+    .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 15px;
+    border-top: 1px solid #ddd;
+    }
+
+    .nav-links { /* -home */ 
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    }
+
+    .nav-links a { /* -links */ 
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { /* -links */ 
+    background-color: #fc6e51;
+    color: white;
+    }
+
+    .menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    }
+    /* End of Header section */

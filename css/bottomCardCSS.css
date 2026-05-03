@@ -1,0 +1,88 @@
+/*
+    bottomCardCSS.css polished version of AI
+
+    ⭐ What this gives you
+    ✔ A bottom card with two stacked sub‑cards
+
+        Top = large featured image
+
+        Bottom = multiple small program cards
+
+    ✔ Top image automatically updates
+
+    It cycles through the same images shown below.
+    ✔ Bottom images rotate left‑to‑right
+
+    Creates a dynamic, modern feel.
+    ✔ Fully responsive
+
+    Grid adapts to mobile automatically.
+    ✔ Matches your site’s design
+
+    Rounded corners, soft shadows, Merriweather aesthetic.
+
+
+    Created on 04/23/2026
+    
+*/
+
+/* Bottom Card Container */
+.about-card.bottom-card {
+  background: #ffffff;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* TOP SUB-CARD (Large Image) */
+.programs-top {
+  width: 100%;
+  height: 220px; /* Taller than bottom cards */
+  overflow: hidden;
+  background: #fff; /* or #f5f5f5 */
+}
+
+.programs-top img.programs-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* cover */
+}
+
+/* BOTTOM SUB-CARD (Multiple Small Cards) */
+.programs-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 15px;
+  background: #fafafa;
+}
+
+/* Each small card */
+.program-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.program-item img {
+  width: 100%;
+  height: 100px;
+  /* object-fit: cover; */
+  object-fit: contain;
+  background: #fff;
+}
+
+.programs-featured-img {
+  transition: opacity .25s ease;
+  opacity: 1;
+}
+
+.programs-featured-img.fade {
+  opacity: 0;
+}
+

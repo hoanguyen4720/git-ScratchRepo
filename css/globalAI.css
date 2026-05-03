@@ -1,0 +1,38 @@
+/*
+  globalAI.css optimized by AI for the webpage
+
+  Created on 04/21/2026
+  
+*/
+
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+section {
+  padding: 5px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}

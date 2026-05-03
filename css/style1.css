@@ -1,0 +1,80 @@
+/* Header Container */
+.site-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Layout */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+/* Logo */
+.logo a {
+  line-height: 1;
+  margin: 0;
+  color: #fc6e51;
+  font-family: "Merriweather","serif";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 54px;
+  display: inline;
+  /*
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222; */
+}
+
+/* Navigation */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-list li a:hover {
+  color: #0077cc;
+}
+
+/* Hamburger (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

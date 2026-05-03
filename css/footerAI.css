@@ -1,0 +1,29 @@
+/*
+  footerAI.css optimized by AI for the webpage
+
+  ⭐ Why this is all you need
+
+  Your footer styles were already simple and efficient.
+  I kept:
+
+      centered text
+
+      consistent padding
+
+      dark background
+
+      white text
+
+  No duplicates, no unnecessary rules, no clutter.
+
+  Created on 04/21/2026
+
+*/
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}

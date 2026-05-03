@@ -1,0 +1,417 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+/* - a narrow band between sections - 04/21/2026
+.section {
+  border-bottom: 2px solid #e5e5e5;
+} */
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+/* End of Global Styles */
+
+/* Top blue band */
+.top-blue-band {
+  width: 100%;
+  background-color: whitesmoke/* blue */
+  padding: 6px 0; /* narrow height */
+}
+
+.blue-band-content {
+  max-width: 1280px; /* match your site container */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: blue;
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+}
+
+.band-right {
+  font-weight: bold;
+}
+/* End of Top blue band */
+
+/* Logo and navigation band */
+/* Put logo on its own line */
+.header-top {
+  padding: 25px 0;
+  text-align: center;
+}
+
+/* Navigation now becomes its own row */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Navigation */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: center; /* space-between */
+  align-items: center;
+  padding: 15px; /* 5px 0 */
+  border-top: 1px solid #ddd
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+  margin: 0;
+  color: #fc6e51;
+  font-family: "Merriweather","serif";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 54px;
+  display: inline;
+
+  /*font-size: 1.5rem;
+  font-weight: bold;400 */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: #fc6e51;
+  color: white;
+}
+
+.nav-links a.active {
+  background-color: #fc6e51;
+  color: white;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+/* End of Logo and Navigation band */
+
+/* Hero section */
+/* Hero */
+.hero {
+
+  height: 500px; /* adjust as needed */
+  background-image: url("Image 20.jpg"); /* your uploaded image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  /* background: linear-gradient(to bottom right, #4a90e2, #0077cc);
+  color: white;
+  padding: 120px 0;
+  text-align: center; */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    /* Gradient overlay */
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),   /* top color */
+    rgba(0, 0, 0, 0.2)    /* bottom color */
+  );
+  /* background: rgba(0,0,0,0.35); */ /* adjust darkness */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+}
+
+
+.hero .btn {
+  background: #fc6e51;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* End of Hero section */
+
+/* Sections area */
+
+/* Mission & Values section */
+.mission-values {
+  width: 100%;
+  background: white;
+  /*padding: 3rem 0;  optional */
+}
+
+.mission-values .mv-content {
+
+  max-width: 1280px; /* or whatever your site uses */
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mission-values .mv-text {
+  flex: 1;
+}
+
+.mission-values .mv-text h2 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 35px;
+}
+
+/* Use the default text style */
+.mission-values .mv-text p {
+  padding-left: 2rem;
+}
+
+/* Not quite like this text style */
+/* .mission-values .mv-text p {
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+  padding-left: 2rem;
+} */
+
+.mission-values .mv-image {
+  flex: 1;
+}
+
+.mission-values .mv-image img {
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
+}
+/* End of Mission Values */
+
+/* ??? */
+section {
+  padding: 5px 0; /* 60px */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* End of ??? */
+
+/* Core-Offerings */
+.core-offerings {
+  width: 100%;
+  background: white;
+  /*padding: 3rem 0;  optional */
+  border-top: 2px solid #e2e0e0; /* 2px solid #ddd */
+}
+
+.core-offerings .core-content {
+  max-width: 640px; /* or whatever your site uses */
+  margin-left: 2rem;
+  /* margin: 0;   auto */
+  padding: 3rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.core-offerings .core-text {
+  flex: 1;
+}
+
+.core-offerings .core-text h2 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 35px;
+  padding-left: 0; /* adjust as needed */
+  text-align: left;
+}
+
+/* .core-offerings .core-text p {
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+  padding-left: 0;
+  text-align: left;
+} */
+
+/* Services */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-card .sc-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional */
+  margin-bottom: 12px; /* spacing before the header */
+}
+
+
+.service-card .sc-text{
+  flex: 1;
+}
+
+.service-card .sc-text h3 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  padding-left: 0; /* adjust as needed */
+  text-align: left;
+}
+/* End of Core Offerings */
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  background: #ccc;
+  height: 180px;
+  border-radius: 8px;
+}
+/* End of Gallery section */
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #0077cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* End of Contact section */
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+/* End of Footer section */
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+
+  .mission-values .mv-content {
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 200px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-start;
+    /*
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  /* Hamburger stuffs - add-on*/
+  .hamburger {
+    display: block;
+  }
+
+}

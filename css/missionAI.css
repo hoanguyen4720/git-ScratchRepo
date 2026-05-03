@@ -1,0 +1,68 @@
+/*
+  missionAI.css optimized by AI for the webpage
+
+⭐ What I improved
+
+  ✔ Grouped logically
+
+      Section container
+
+      Content layout
+
+      Text
+
+      Image
+
+      Mobile behavior
+
+  Created on 04/21/2026
+
+*/
+
+/* Mission & Values Section */
+.mission-values {
+  width: 100%;
+  background: white;
+}
+
+.mission-values .mv-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mission-values .mv-text {
+  flex: 1;
+}
+
+.mission-values .mv-text h2 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.mission-values .mv-text p {
+  padding-left: 2rem;
+}
+
+.mission-values .mv-image {
+  flex: 1;
+}
+
+.mission-values .mv-image img {
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .mission-values .mv-content {
+    flex-direction: column;
+  }
+}
