@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+  .mission-values .mv-content {
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 200px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-start;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  #menuID-btn {
+    display: flex;
+  }
+
+  #menuID-btn.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  #menuID-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menuID-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

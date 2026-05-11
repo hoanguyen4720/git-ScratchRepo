@@ -1,0 +1,54 @@
+.core-offerings {
+  width: 100%;
+  background: white;
+  border-top: 2px solid #e2e0e0;
+}
+
+.core-offerings .core-content {
+  max-width: 640px;
+  margin-left: 2rem;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.core-offerings .core-text {
+  flex: 1;
+}
+
+.core-offerings .core-text h2 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: left;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-card .sc-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.service-card .sc-text h3 {
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}

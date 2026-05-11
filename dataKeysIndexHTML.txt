@@ -1,0 +1,35 @@
+// May 05, 2026
+
+*** Hero section ***
+
+<h1 data-key="hero_title"></h1>
+<p data-key="hero_subtitle"></p>
+<a href="#contact" class="home-hero-btn" data-key="hero_button"></a>
+
+*** Mission section ***
+
+<h2 data-key="mission_title"></h2>
+<p data-key="mission_text"></p>
+
+*** Core Offering section ***
+
+<h2 data-key="coreOfferings_title"></h2>
+<p data-key="coreOfferings_text"></p>
+
+<h3 data-key="service_1_title"></h3>
+<p data-key="service_1_text"></p>
+
+<h3 data-key="service_2_title"></h3>
+<p data-key="service_2_text"></p>
+
+<h3 data-key="service_3_title"></h3>
+<p data-key="service_3_text"></p>
+
+<h3 data-key="service_4_title"></h3>
+<p data-key="service_4_text"></p>
+
+*** About section ***
+
+<h3 data-key="about_title"></h3>
+<p data-key="about_text"></p>
+<a href="#contact" class="about-btn" data-key="about_button"></a>

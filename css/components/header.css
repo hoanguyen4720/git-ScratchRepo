@@ -1,0 +1,239 @@
+/* Final version */
+/* =========================================
+   TOP BLUE BAND (same in both snippets)
+   ========================================= */
+/*
+.top-blue-band {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 6px 0;
+}
+
+.blue-band-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: blue;
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+}
+
+.band-right {
+  font-weight: bold;
+}
+*/
+
+/* =========================================
+   MOBILE-FIRST HEADER + LOGO
+   (Snippet #1)
+   ========================================= */
+/*
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-top {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+  margin: 0;
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 54px;
+  display: inline;
+}
+*/
+
+/* =========================================
+   MOBILE-FIRST NAVIGATION
+   (Snippet #1)
+   ========================================= */
+
+/* Navigation bar */
+/*
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  gap: 20px;
+}
+*/
+/* Mobile: nav-links hidden by default */
+/*
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+*/
+/* Mobile: show when menu is toggled */
+/*
+.nav-links.open {
+  display: flex;
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #fc6e51;
+  color: white;
+}
+*/
+/* Mobile hamburger button (from snippet #2) */
+/*
+#menuID-btn {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#menuID-btn span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fc6e51;
+  border-radius: 2px;
+}
+*/
+
+/* =========================================
+   DESKTOP OVERRIDES (Snippet #2)
+   ========================================= */
+/* @media (min-width: 768px) { */
+
+  /* Desktop nav bar */
+  /*
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 15px;
+    border-top: 1px solid #ddd;
+  }
+  */
+  /* Desktop: nav-links always visible, horizontal */
+  /*
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    border-top: none;
+  }
+  */
+  /* Desktop: hide hamburger button */
+  /*
+  #menuID-btn {
+    display: none;
+  }
+  */
+/* } */
+
+/* */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-top {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  line-height: 1;
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 54px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 15px;
+  border-top: 1px solid #ddd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #fc6e51;
+  color: white;
+}
+
+#menuID-btn {
+  width: 30px;
+  height: 22px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#menuID-btn span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fc6e51;
+  border-radius: 2px;
+}
+/* */
