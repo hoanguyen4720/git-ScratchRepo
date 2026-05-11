@@ -34,7 +34,10 @@
 
 </head>
 
-<body class="home-page">
+<body data-content="content/home.json" class="home-page">
+<!-- Multiple strings within data-content -->
+<!-- <body data-content="content/home.json, content/common.json"> -->
+
 
   <!-- Top blue band section -->
   <div id="top-band-placeholder"></div>
@@ -77,9 +80,14 @@
   <!-- HERO SECTION -->
   <section class="home-hero">
     <div class="home-hero-content">
-      <h1>Discover the heart of Vietnamese culture</h1>
-      <p>Preserving Vietnamese culture, language, and community for future generations.</p>
-      <a href="#contact" class="home-hero-btn">Explore Our Programs</a>
+      <!-- <h1>Discover the heart of Vietnamese culture</h1> -->
+      <!-- <p>Preserving Vietnamese culture, language, and community for future generations.</p> -->
+      <!-- <a href="#contact" class="home-hero-btn">Explore Our Programs</a> -->
+
+      <!-- data-keys from content.json file > -->
+      <h1 data-key="hero_title"></h1>
+      <p data-key="hero_subtitle"></p>
+      <a href="#contact" class="home-hero-btn" data-key="hero_button"></a>
     </div>
   </section>
   <!-- End of Hero section-->
@@ -105,7 +113,6 @@
 <!-- End of Mission & Values section -->
 
 <!-- Core Offerings section-->
-  <!-- Services Section -->
   <section id="Our Core Offerings" class="core-offerings container">
     <div class="core-content">
       <div class="core-text">
@@ -115,6 +122,7 @@
         </p>
       </div>
     </div>
+    <!-- Services Section -->
     <div class="service-grid">
       <div class="service-card">
         <div class="sc-text">
@@ -152,7 +160,6 @@
   <!-- About section -->
   <!-- About Section -->
   <section id="about" class="about container">
-    <!-- <h2>About the VietAm Cultural Center</h2> -->
 
     <div class="about-wrapper">
 
@@ -258,7 +265,7 @@
   <!-- Footer section -->
   <!-- Footer -->
   <footer>
-    <p>© 2026 YourBrand — All Rights Reserved</p>
+    <p>© 2026 Vietnamese-American Community Center — All Rights Reserved</p>
   </footer>
   <!-- End of Footer section -->
 
@@ -273,6 +280,12 @@
 
   <!-- Top blue band Java script -->
   <script src="js/top-band.js"></script>
+
+  <!-- Content JSON loader script to load home.json file with all data-keys -->
+  <!-- <script>
+  const contentFile = "content/home.json";
+  </script> -->
+  <script src="js/content-loader.js"></script>
 
   <!-- End of Scripts section -->
 </body>

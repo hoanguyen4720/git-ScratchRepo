@@ -1,0 +1,895 @@
+✅ HTML = Structure & Meaning
+
+	HTML defines:
+
+	    What elements exist on the page
+
+	    Their hierarchy
+
+	    Their semantic meaning
+
+	Examples:
+
+	    <h1> = main title
+
+	    <p> = paragraph
+
+	    <section> = logical content block
+
+	    <nav> = navigation
+
+	    <footer> = footer
+
+	HTML answers the question:
+	👉 “What is on the page?”
+
+	It does not control how things look or behave.
+	
+🎨 CSS = Presentation & Styling
+
+	CSS defines:
+
+	    Colors
+
+	    Fonts
+
+	    Layout (flexbox, grid)
+
+	    Spacing (margin, padding)
+
+	    Sizes
+
+	    Animations
+
+	    Responsive behavior
+
+	CSS answers the question:
+	👉 “How does it look?”
+
+	It does not create content or logic.
+	
+⚙️ JavaScript = Behavior & Logic
+
+	JavaScript controls:
+
+	    Interactivity
+
+	    Dynamic content (like your JSON loader)
+
+	    Fetching components
+
+	    Animations
+
+	    Form validation
+
+	    Event handling (click, scroll, hover)
+
+	JavaScript answers the question:
+	👉 “How does it behave?”
+
+	It does not define structure or styling.
+	
+🧠 The Big Picture (the “Holy Trinity” of Web Dev)
+
+	Layer	Responsibility		Example
+	HTML	Structure & content	“There is a button here.”
+	CSS	Appearance		“The button is blue and centered.”
+	JS	Behavior		“When clicked, the button loads data.”
+
+They work together, but each has a clear job.
+
+⭐ In your project specifically:
+
+	You are already doing this correctly:
+	✔ HTML
+
+	Defines your sections, placeholders, and data-key attributes.
+	✔ CSS
+
+	Defines your layout, colors, spacing, hero section, cards, etc.
+	✔ JavaScript
+
+	    Loads components (header.html, top-band.html)
+
+	    Loads JSON content dynamically
+
+	    Handles navigation highlighting
+
+	    Controls hamburger menu
+
+	    Controls bottom card behavior
+
+You’re building a modular, component‑based website, which is exactly how modern web development works.
+
+If you want, I can help you next with:
+
+    Organizing your CSS into reusable modules
+
+    Making your JavaScript more modular
+
+    Improving your component loading system
+
+    Adding multi‑language support
+
+    Adding debugging tools for each layer
+
+Just tell me what direction you want to explore next.
+
+-----------------------------------------------------------------------------
+
+✅ 1. Your current CSS files
+
+    How many CSS files do you have?    What are their names?
+	  <!-- Load global styles first -->
+	  <link rel="preload" href="css/globalAI.css" as="style">
+	  <!-- Load main site styles -->
+	  <link rel="preload" href="css/mainAI.css" as="style">
+	  <link rel="preload" href="css/heroCSS.css" as="style">
+	  <link rel="preload" href="css/bottomCardCSS.css" as="style">
+	  
+	  <link rel="stylesheet" href="css/globalAI.css">
+	  <link rel="stylesheet" href="css/mainAI.css">
+	  <link rel="stylesheet" href="css/heroCSS.css">
+	  <link rel="stylesheet" href="css/bottomCardCSS.css">
+
+	    <!-- Top blue band link -->
+	  <link rel="stylesheet" href="css/top-band.css">
+
+
+    Are they large or small?
+    	Small
+
+    Are they mixed (layout + colors + components all in one)?
+    	Look like mixed of layout, colors and components all in one
+
+    Each web page loads "css/header.css" file for header, nav bar
+    
+    Let me know when ready to see one-by-one
+    
+    part 1/5 - globalAI.css
+	/* =========================================================
+	   GLOBAL STYLES
+	========================================================= */
+
+	{
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	}
+
+	body {
+	  margin: 0;
+	  font-family: Arial, sans-serif;
+	  background: #f7f7f7;
+	  color: #222;
+	}
+
+	.container {
+	  width: 90%;
+	  max-width: 1280px;
+	  margin: auto;
+	}
+
+	section {
+	  padding: 5px 0;
+	}
+
+	h2 {
+	  text-align: center;
+	  margin-bottom: 30px;
+	}
+
+    part 2/5 - mainAI.css
+    /* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+	body {
+	  margin: 0;
+	  font-family: Arial, sans-serif;
+	  background: #f7f7f7;
+	  color: #222;
+	}
+
+	.container {
+	  width: 90%;
+	  max-width: 1280px;
+	  margin: auto;
+	}
+
+	section {
+	  padding: 5px 0;
+	}
+
+	h2 {
+	  text-align: center;
+	  margin-bottom: 30px;
+	}
+
+
+	/* =========================================================
+	   HEADER
+	   ========================================================= */
+
+	/* Top blue band */
+	.top-blue-band {
+	  width: 100%;
+	  background-color: whitesmoke;
+	  padding: 6px 0;
+	}
+
+	.blue-band-content {
+	  max-width: 1280px;
+	  margin: 0 auto;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 0 1rem;
+	  color: blue;
+	  font-family: "Merriweather", serif;
+	  font-size: 0.9rem;
+	}
+
+	.band-right {
+	  font-weight: bold;
+	}
+
+	/* Header container */
+	header {
+	  background: #ffffff;
+	  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	  position: sticky;
+	  top: 0;
+	  z-index: 1000;
+	}
+
+	/* Logo row */
+	.header-top {
+	  padding: 25px 0;
+	  text-align: center;
+	}
+
+	.logo {
+	  text-align: center;
+	  width: 100%;
+	  margin: 0;
+	  line-height: 1;
+	  color: #fc6e51;
+	  font-family: "Merriweather", serif;
+	  font-weight: bold;
+	  font-size: 54px;
+	}
+
+	/* Navigation */
+	.nav {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 20px;
+	  padding: 22px 15px;
+	  border-top: 1px solid #ddd;
+	}
+
+	.nav-links { /* -home */ 
+	  list-style: none;
+	  display: flex;
+	  gap: 25px;
+	  justify-content: center;
+	  width: 100%;
+	}
+
+	.nav-links a { /* -links */ 
+	  padding: 6px 12px;
+	  border-radius: 4px;
+	  transition: 0.2s ease;
+	  text-decoration: none;
+	  color: #333;
+	  font-weight: 500;
+	}
+
+	.nav-links a:hover,
+	.nav-links a.active { /* -links */ 
+	  background-color: #fc6e51;
+	  color: white;
+	}
+	/* class
+	.menu-btn {
+	  display: none;
+	}
+	 */
+	/* ID */
+	#menuID-btn {
+	  width: 30px;
+	  height: 22px;
+	  display: none; /* hidden on desktop */
+	  flex-direction: column;
+	  justify-content: space-between;
+	  cursor: pointer;
+
+	}
+
+	#menuID-btn span {
+	  display: block;
+	  width: 100%;
+	  height: 4px;
+	  background: #fc6e51; /* ORANGE COLOR */
+	  border-radius: 2px;
+	}
+
+	/*
+	#menuID-btn {
+	  display: none;
+	  font-size: 1.8rem;
+	  cursor: pointer;
+	  border: 2px solid red;
+	}
+	*/
+	/* End of Header section */
+
+	/* =========================================================
+	   MISSION & VALUES
+	   ========================================================= */
+	.mission-values {
+	  width: 100%;
+	  background: white;
+	}
+
+	.mission-values .mv-content {
+	  max-width: 1280px;
+	  margin: 0 auto;
+	  padding: 1.5rem 0;
+	  display: flex;
+	  align-items: center;
+	  gap: 0.5rem;
+	}
+
+	.mission-values .mv-text {
+	  flex: 1;
+	}
+
+	.mission-values .mv-text h2 {
+	  color: #fc6e51;
+	  font-family: "Merriweather", serif;
+	  font-weight: bold;
+	  font-size: 35px;
+	}
+
+	.mission-values .mv-text p {
+	  padding-left: 8rem;
+	}
+
+	.mission-values .mv-image {
+	  flex: 1;
+	}
+
+	.mission-values .mv-image img {
+	  width: 100%;
+	  max-height: 260px;
+	  object-fit: contain;
+	  border-radius: 8px;
+	}
+
+
+	/* =========================================================
+	   CORE OFFERINGS + SERVICES
+	   ========================================================= */
+	.core-offerings {
+	  width: 100%;
+	  background: white;
+	  border-top: 2px solid #e2e0e0;
+	}
+
+	.core-offerings .core-content {
+	  max-width: 640px;
+	  margin-left: 2rem;
+	  padding: 1.5rem 0;
+	  display: flex;
+	  align-items: flex-start;
+	  gap: 2rem;
+	}
+
+	.core-offerings .core-text {
+	  flex: 1;
+	}
+
+	.core-offerings .core-text h2 {
+	  color: #fc6e51;
+	  font-family: "Merriweather", serif;
+	  font-weight: bold;
+	  font-size: 35px;
+	  text-align: left;
+	}
+
+	/* Services grid */
+	.service-grid {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	  gap: 20px;
+	}
+
+	.service-card {
+	  background: white;
+	  padding: 25px;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	}
+
+	.service-card .sc-image {
+	  width: 100%;
+	  height: auto;
+	  border-radius: 8px;
+	  margin-bottom: 12px;
+	}
+
+	.service-card .sc-text h3 {
+	  color: #fc6e51;
+	  font-family: "Merriweather", serif;
+	  font-weight: bold;
+	  font-size: 20px;
+	  text-align: left;
+	}
+
+	/* =========================================================
+	   ABOUT
+	   ========================================================= */
+
+	#about {
+	  padding-top: 60px; /* adjust to taste */ /* margin-top: 60px; */
+	}
+
+
+	.about-wrapper {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  gap: 2rem;
+	  align-items: stretch; /* forces both columns to match height */
+	}
+
+	.about-right {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 1.5rem;
+	}
+
+	/* Top Card Container */
+	.about-card.top-card {
+	  background: #ffffff;
+	  padding: 28px;
+	  border-radius: 12px;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+	  display: flex;
+	  flex-direction: column;
+	  gap: 18px;
+	}
+
+	/* Text Wrapper */
+	.about-card.top-card .about-text {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 10px;
+	}
+
+	/* Heading */
+	.about-card.top-card h3 {
+	  font-family: "Merriweather", serif;
+	  font-size: 26px;
+	  font-weight: bold;
+	  color: #fc6e51;
+	  margin: 0;
+	  line-height: 1.3;
+	}
+
+	/* Paragraph */
+	.about-card.top-card p {
+	  font-size: 1.05rem;
+	  line-height: 1.65;
+	  color: #444;
+	  margin: 0;
+	}
+
+	/* Button */
+	.about-card.top-card .about-btn {
+	  align-self: flex-start;
+	  background: #fc6e51;
+	  color: white;
+	  padding: 12px 22px;
+	  border-radius: 6px;
+	  text-decoration: none;
+	  font-weight: bold;
+	  font-size: 1rem;
+	  transition: 0.2s ease;
+	}
+
+	.about-card.top-card .about-btn:hover {
+	  background: #e85d42;
+	}
+
+	.about-left {
+	  height: 100%;
+	}
+
+	.about-left img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover; /* fills the space without distortion */
+	  border-radius: 10px;
+	}
+
+
+	/* =========================================================
+	   GALLERY
+	   ========================================================= */
+	.gallery-grid {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	  gap: 15px;
+	}
+
+	.gallery-item {
+	  background: #ccc;
+	  height: 180px;
+	  border-radius: 8px;
+	}
+
+
+	/* =========================================================
+	   CONTACT
+	   ========================================================= */
+	.contact-form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 15px;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+	  padding: 12px;
+	  border-radius: 5px;
+	  border: 1px solid #ccc;
+	}
+
+	.contact-form button {
+	  background: #0077cc;
+	  color: white;
+	  padding: 12px;
+	  border: none;
+	  border-radius: 5px;
+	  cursor: pointer;
+	}
+
+
+	/* =========================================================
+	   FOOTER
+	   ========================================================= */
+	footer {
+	  text-align: center;
+	  padding: 20px;
+	  background: #222;
+	  color: white;
+	}
+
+
+	/* =========================================================
+	   RESPONSIVE
+	   ========================================================= */
+	@media (max-width: 768px) {
+
+	  .mission-values .mv-content {
+	    flex-direction: column;
+	  }
+
+	  .nav {
+	    justify-content: space-between;
+	  }
+
+	  .nav-links {
+	    display: none;
+	    flex-direction: column;
+	    background: white;
+	    padding: 20px;
+	    position: absolute;
+	    top: 120px;
+	    right: 0;
+	    width: 200px;
+	    border-left: 1px solid #ddd;
+	    border-bottom: 1px solid #ddd;
+	    justify-content: flex-start;  /* 04-29-2026 */
+	  }
+
+	  .nav-links.open {
+	    display: flex;
+	  }
+
+
+	  /* Mobile menu button */
+	  /* ID */
+	  #menuID-btn {
+	   /*  */
+	  display: flex;
+	  }
+
+	  /* When menu is open → turn into X  */
+	  #menuID-btn.open span:nth-child(1) {
+	    transform: translateY(9px) rotate(45deg);
+	  }
+
+	  #menuID-btn.open span:nth-child(2) {
+	    opacity: 0;
+	  }
+
+	  #menuID-btn.open span:nth-child(3) {
+	    transform: translateY(-9px) rotate(-45deg);
+	  }
+
+	}
+    part 3/5 - heroCSS.css
+    /* Hero Section */
+.home-hero {
+  height: 550px;
+  background-image: url("../images/heroImage.jpg"); /* Image 20.jpg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Overlay */
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);   /* 0.45	Dark (your current) */
+  z-index: 1;
+}
+
+/* Content */
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  color: white;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Headline */
+.home-hero-content h1 {
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Subheadline */
+.home-hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Button */
+.home-hero-btn {
+  background: #fc6e51;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.2s ease;
+}
+
+.home-hero-btn:hover {
+  background: #e85d42;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home-hero {
+    height: 450px;
+  }
+
+  .home-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+    part 4/5 - bottomCardCSS.css
+    /* Bottom Card Container */
+.about-card.bottom-card {
+  background: #ffffff;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* TOP SUB-CARD (Large Image) */
+.programs-top {
+  width: 100%;
+  height: 220px; /* Taller than bottom cards */
+  overflow: hidden;
+  background: #fff; /* or #f5f5f5 */
+}
+
+.programs-top img.programs-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* cover */
+}
+
+/* BOTTOM SUB-CARD (Multiple Small Cards) */
+.programs-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 15px;
+  background: #fafafa;
+}
+
+/* Each small card */
+.program-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.program-item img {
+  width: 100%;
+  height: 100px;
+  /* object-fit: cover; */
+  object-fit: contain;
+  background: #fff;
+}
+
+.programs-featured-img {
+  transition: opacity .25s ease;
+  opacity: 1;
+}
+
+.programs-featured-img.fade {
+  opacity: 0;
+}
+
+    part 5/5 - header.css
+    /* Top blue band */
+.top-blue-band {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 6px 0;
+}
+
+.blue-band-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: blue;
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+}
+
+.band-right {
+  font-weight: bold;
+}
+/* End of Top blue band */
+
+
+/* Logo and navigation band */
+.header-top {
+  padding: 25px 0;
+  text-align: center;
+}
+
+/* Navigation row */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Sticky header container */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+  margin: 0;
+  color: #fc6e51;
+  font-family: "Merriweather","serif";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 54px;
+  display: inline;
+}
+
+/* Navigation links */
+/* Hide nav links on mobile */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Show nav when open */
+.nav-links.open {
+  display: flex;
+}
+
+/* .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+} */
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: #fc6e51;
+  color: white;
+}
+
+.nav-links a.active {
+  background-color: #fc6e51;
+  color: white;
+}

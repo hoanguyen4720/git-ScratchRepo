@@ -1,0 +1,11 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  background: #ccc;
+  height: 180px;
+  border-radius: 8px;
+}

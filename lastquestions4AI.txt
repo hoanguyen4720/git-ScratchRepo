@@ -1,0 +1,480 @@
+css/
+│
+├── base/
+│   ├── reset.css
+│   ├── typography.css
+│   └── variables.css   (we will add later)
+│
+├── layout/
+│   ├── container.css
+│   └── spacing.css
+│
+└── main.css   (imports everything)
+
+<link rel="stylesheet" href="css/main.css">
+
+⭐ Final Answer (clear and direct)
+❌ Do NOT update the header script
+❌ Do NOT load header.css separately
+❌ Do NOT keep the old header.css file
+✔ DO update header.html to remove any <link> tags
+✔ DO import components/header.css inside main.css
+✔ DO load only main.css in your HTML <head>
+
+⭐ How I know to continue where we stopped
+
+I follow your last meaningful topic in the conversation.
+Right now, that topic is:
+
+    Modularizing your CSS + header component loading
+
+So when you return, you can say anything like:
+
+    “Let’s continue the CSS modularization.”
+
+    “I’m back — where were we?”
+
+    “Let’s resume with the header.”
+
+    “Continue from earlier.”
+
+    “I’m ready to keep going.”
+
+Any of those will tell me to continue the same thread.
+⭐ What not to worry about
+
+You don’t need to:
+
+    repeat your files
+
+    re‑upload anything
+
+    explain the whole context again
+
+    remind me what we were doing
+
+I already have the context in this conversation.
+⭐ If you want a simple phrase
+
+Use this when you return:
+
+    “Continue where we left off.”
+
+That’s enough for me to resume the exact thread.
+
+🔵 1. .nav — Snippet #1 vs Snippet #2
+Snippet #1
+css
+
+	.nav {
+	  display: flex;
+	  justify-content: flex-start;
+	  align-items: center;
+	  gap: 20px;
+	  padding-bottom: 10px;
+	  border-top: 1px solid #ddd;
+	}
+
+	/* Later in snippet #1 — overrides the above */
+	.nav {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  padding: 15px;
+	  border-top: 1px solid #ddd;
+	}
+
+Snippet #2
+css
+
+	.nav {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 20px;
+	  padding: 22px 15px;
+	  border-top: 1px solid #ddd;
+	}
+
+✔️ Key differences
+
+    Snippet #1 has two conflicting .nav blocks inside itself.
+
+    Snippet #1 uses padding-bottom: 10px in the first block, then padding: 15px in the second.
+
+    Snippet #2 uses padding: 22px 15px.
+
+    Snippet #1 originally aligns nav items left, then overrides to center.
+
+    Snippet #2 aligns center.
+
+🔵 2. .nav-links — Snippet #1 vs Snippet #2
+Snippet #1
+css
+
+	/* Mobile-first: hidden by default */
+	.nav-links {
+	  display: none;
+	  flex-direction: column;
+	  gap: 15px;
+	  background: white;
+	  width: 100%;
+	  padding: 20px;
+	  border-top: 1px solid #ddd;
+	}
+
+	/* When menu is open */
+	.nav-links.open {
+	  display: flex;
+	}
+
+	.nav-links a {
+	  padding: 6px 12px;
+	  border-radius: 4px;
+	  transition: 0.2s ease;
+	  text-decoration: none;
+	  color: #333;
+	  font-weight: 500;
+	}
+
+Snippet #2
+css
+
+	.nav-links {
+	  list-style: none;
+	  display: flex;
+	  gap: 25px;
+	  justify-content: center;
+	  width: 100%;
+	}
+
+	.nav-links a {
+	  padding: 6px 12px;
+	  border-radius: 4px;
+	  transition: 0.2s ease;
+	  text-decoration: none;
+	  color: #333;
+	  font-weight: 500;
+	}
+
+✔️ Key differences
+
+    Snippet #1 = mobile-first collapsible menu (hidden by default).
+
+    Snippet #2 = desktop-first horizontal menu (always visible).
+
+    Snippet #1 uses column layout; Snippet #2 uses row layout.
+
+    Snippet #1 includes .nav-links.open; Snippet #2 does not.
+
+🔵 3. .logo, header, .header-top — Snippet #1 vs Snippet #2
+A. header
+Snippet #1
+css
+
+	header {
+	  background: #ffffff;
+	  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	  position: sticky;
+	  top: 0;
+	  z-index: 1000;
+	}
+
+Snippet #2
+css
+
+	header {
+	  background: #ffffff;
+	  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	  position: sticky;
+	  top: 0;
+	  z-index: 1000;
+	}
+
+✔️ Key differences
+
+    Identical — no conflict.
+
+B. .header-top
+Snippet #1
+css
+
+	.header-top {
+	  padding: 25px 0;
+	  text-align: center;
+	}
+
+Snippet #2
+css
+
+	.header-top {
+	  padding: 25px 0;
+	  text-align: center;
+	}
+
+✔️ Key differences
+
+    Identical — no conflict.
+
+C. .logo
+Snippet #1
+css
+
+	.logo {
+	  text-align: center;
+	  width: 100%;
+	  line-height: 1;
+	  margin: 0;
+	  color: #fc6e51;
+	  font-family: "Merriweather","serif";
+	  font-weight: bold;
+	  font-style: normal;
+	  font-size: 54px;
+	  display: inline;
+	}
+
+Snippet #2
+css
+
+	.logo {
+	  text-align: center;
+	  width: 100%;
+	  margin: 0;
+	  line-height: 1;
+	  color: #fc6e51;
+	  font-family: "Merriweather", serif;
+	  font-weight: bold;
+	  font-size: 54px;
+	}
+
+✔️ Key differences
+
+    Snippet #1 includes display: inline; and font-style: normal;
+
+    Snippet #2 omits those (browser defaults apply)
+
+    Otherwise identical.
+
+⭐ Summary of What You Now Know
+Direct conflicts
+
+    .nav
+
+    .nav-links
+
+Minor differences
+
+    .logo
+
+Identical
+
+    header
+
+    .header-top
+
+⭐ Next Step (your choice)
+
+Now that you’ve seen the differences clearly, you can choose how to combine them:
+Option A — Mobile-first → Desktop override
+
+	Snippet #1 = mobile
+	Snippet #2 = desktop
+	(very clean)
+Option B — Fallback → Modern override
+
+	Snippet #1 = fallback
+	Snippet #2 = inside @supports (display: flex)  
+	(best for compatibility)
+Option C — Merge into one unified system
+
+I rewrite everything into one clean, conflict‑free CSS file.
+
+⭐ Unified CSS (Mobile‑First Base + Desktop Overrides)
+css
+
+/* =========================================
+   TOP BLUE BAND (same in both snippets)
+   ========================================= */
+.top-blue-band {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 6px 0;
+}
+
+.blue-band-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: blue;
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+}
+
+.band-right {
+  font-weight: bold;
+}
+
+
+/* =========================================
+   MOBILE-FIRST HEADER + LOGO
+   (Snippet #1)
+   ========================================= */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-top {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+  margin: 0;
+  color: #fc6e51;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 54px;
+  display: inline;
+}
+
+
+/* =========================================
+   MOBILE-FIRST NAVIGATION
+   (Snippet #1)
+   ========================================= */
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  gap: 20px;
+}
+
+/* Mobile: nav-links hidden by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Mobile: show when menu is toggled */
+.nav-links.open {
+  display: flex;
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #fc6e51;
+  color: white;
+}
+
+/* Mobile hamburger button (from snippet #2) */
+#menuID-btn {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#menuID-btn span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fc6e51;
+  border-radius: 2px;
+}
+
+
+/* =========================================
+   DESKTOP OVERRIDES (Snippet #2)
+   ========================================= */
+@media (min-width: 768px) {
+
+  /* Desktop nav bar */
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 15px;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Desktop: nav-links always visible, horizontal */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    border-top: none;
+  }
+
+  /* Desktop: hide hamburger button */
+  #menuID-btn {
+    display: none;
+  }
+}
+
+⭐ Why This Unified CSS Works Perfectly
+✔ Mobile-first base (Snippet #1)
+
+    .nav-links hidden
+
+    hamburger menu works
+
+    vertical menu
+
+    simple spacing
+
+✔ Desktop overrides (Snippet #2)
+
+    .nav-links visible
+
+    horizontal layout
+
+    more spacing
+
+    hamburger hidden
+
+✔ No conflicts
+
+    .nav, .nav-links, .logo, header, .header-top are all harmonized
+
+    Desktop rules only activate at min-width: 768px
+
+    Mobile rules remain untouched
+
+✔ Pure CSS — no if/else macros needed
+
+Media queries are the conditional logic.
